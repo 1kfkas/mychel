@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+  <head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="jQuery.js"></script>
+    <script src="app.js"></script>
+    <title>Mychel Task Optimizer</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>CRIAÇÃO DA CLASSE</legend>
+
+      <label for="nome-classe">Nome da Classe :</label>
+      <input type="text" for="nome-classe" />
+    </fieldset>
+
+    <fieldset>
+      <legend>CRIAÇÃO DOS ATRIBUTOS</legend>
+      <label for="set-atributo">Nome do Atributo</label>
+      <div>
+        <input id="set-atributo" type="text" autocomplete="off" for="set-atributo" />
+      </div>
+      <p id="naopode-atributo">ATRIBUTO JÁ EXISTENTE!</p>
+      <br />
+      <div id="atributos" class="atributos"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>ESCOLHA</legend>
+
+      <input type="checkbox" for="gets" checked="checked"/>
+      <label for="gets">Colocar Gets</label>
+
+      <input type="checkbox" for="sets" checked="checked"/>
+      <label for="sets">Colocar Sets</label>
+    </fieldset>
+
+    <button id="gerar" onclick="gerarCodigo()">GERAR CÓDIGO!</button>
+    <br />
+    <div id="caixa" class="caixa">
+      <p>class Veiculo:</p>
+      <p>&emsp;def __init__(self):</p>
+      <p>&emsp;&emsp;self.nome = "Joao Vitor"</p>
+    </div>
+
+    <script>
+      $("#naopode-atributo").ready(function(){
+        $("#naopode-atributo").hide();
+      });
+    </script>
+  </body>
+</html>
