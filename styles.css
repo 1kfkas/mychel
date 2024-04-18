@@ -48,6 +48,7 @@ input[type=text]:focus {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: min-content;
+  grid-gap: 10px;
 }
 
 .atributo-item {
@@ -59,14 +60,39 @@ input[type=text]:focus {
 }
 
 .atributo-item:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
   background-color: red;
   cursor:pointer;
 }
 
+.atributo-item:active {
+  transform: scale(1.1);
+}
+
 input[type=checkbox]{
-  padding: 30px;
+  width: 20px;
+  height: 20px;
   transition: 200ms;
+}
+
+
+@media screen and (max-width: 580px) {
+  legend {
+    font-weight: 900;
+    font-size: 8vw;
+  }
+
+  input[type=text] {
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+    transition: 200ms;
+  }
+
+  input[type=checkbox]{
+    width: 40px;
+    height: 40px;
+  }
 }
 
 input[type=checkbox]:hover{
@@ -98,7 +124,11 @@ button:active {
 }
 
 .caixa {
-  display: none;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 40px;
   padding: 10px;
   background-color: rgb(45, 62, 80);
   color: cornsilk;
